@@ -4,6 +4,8 @@ body{
     font-family: 'Inconsolata', monospace;
     margin: 0px;
    background-color: black;
+   color: white;
+   font-size: 20px;
 }
 
 .container{
@@ -58,7 +60,7 @@ body{
 
 .portfolio-items-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /*So that it will respond to screen size*/
 }
 
 .portfolio-item-wrapper{
@@ -104,21 +106,79 @@ body{
     filter: brightness(10%);
 }
 
+
+
 /*the about page */
-.two-column-wrapper{
+
+.profile-grid-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'left-content right-content';
+    grid-template-columns: 1fr, 1fr, 1fr;
+    width: 60%;
+    margin: auto;
+    grid-gap: 50px;
+    text-align: center;
+
+}
+
+.profile-image-wrapper img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.profile-image-wrapper {
+    padding: 30px;
 }
 
 
 .profile-content-wrapper{
-    padding: 30px;
+    padding: 30px;  
 }
+
+.profile-content-wrapper p{
+    padding: 30px;
+    text-align: justify;  
+}
+
 
 .profile-content-wrapper h1 {
     color: lightseagreen;
 }
 
-.profile-content-wrapper p{
-    color: white;
+
+
+
+/*This is to make the website responsive*/
+
+
+@media(max-width:1299px){
+    
+    .profile-grid-wrapper{
+        grid-template-areas:
+        'left-content'
+        'right-content';
+        width: 70%;
+        margin: auto;
+    }
 }
+
+
+@media(max-width:700px){
+    
+    .profile-grid-wrapper{
+        grid-template-areas:
+        'left-content'
+        'right-content';
+        grid-gap: 40px;
+        width: 80%;
+        margin: auto;
+    }
+   
+    .left-content img{
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }  
+}
+
