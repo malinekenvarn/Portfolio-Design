@@ -3,7 +3,7 @@
 body{
     font-family: 'Inconsolata', monospace;
     margin: 0px;
-   background-color: black;
+   background-color: #080808;
    color: white;
    font-size: 20px;
 }
@@ -44,7 +44,7 @@ body{
 
 
 .nav-link-wrapper a:hover{
-    color:lightseagreen;
+    color: #4bc7cf;
 }
 
 
@@ -98,7 +98,7 @@ body{
 /*Needs to be more specific with selector */
 .img-text-wrapper:hover .subtitle{
     font-weight: 600;
-    color: lightseagreen;
+    color: #4bc7cf;
 }
 
 .img-darken{
@@ -142,9 +142,9 @@ body{
 
 
 .profile-content-wrapper h1 {
-    color: lightseagreen;
+    /*color: #4bc7cf; sea serpent*/
+    color:#4bc7cf;
 }
-
 
 
 
